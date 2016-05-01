@@ -1,0 +1,3 @@
+[Project]
+Manager=KDevCustomMakeManager
+Name=ta_regtest
