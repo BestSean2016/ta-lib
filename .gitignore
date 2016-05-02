@@ -11,6 +11,7 @@
 *.la
 *.a
 *.Plo
+*.Po
 *.obj
 *.orig
 *.rej
@@ -75,9 +76,8 @@ Thumbs.db
 *.dll
 *.exe
 
-./build
-./build/*
-!build/
 *.pro.user
 
-
+/build
+/autom4*
+*.log
