@@ -7,6 +7,10 @@
 *.core
 *.moc
 *.o
+*.lo
+*.la
+*.a
+*.Plo
 *.obj
 *.orig
 *.rej
@@ -23,7 +27,7 @@ tags
 .DS_Store
 .directory
 *.debug
-Makefile*
+#Makefile*
 *.prl
 *.app
 moc_*.cpp
@@ -75,4 +79,5 @@ Thumbs.db
 ./build/*
 !build/
 *.pro.user
+
 

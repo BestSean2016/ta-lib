@@ -418,6 +418,8 @@ TA_RetCode TA_PREFIX(INT_MACD)( int    startIdx,
    /* Allocate intermediate buffer for fast/slow EMA. */
    tempInteger = (endIdx-startIdx)+1+lookbackSignal;
    ARRAY_ALLOC( fastEMABuffer, tempInteger );
+   // SEAN SEAN SEAN fprintf(stderr, "-*-*-*-*-*-*-* %x, %d array alloc, lookbackSignal %d\n", fastEMABuffer, tempInteger, lookbackSignal);
+   
    #if !defined( _JAVA )
       if( !fastEMABuffer )
       {
@@ -492,7 +494,9 @@ TA_RetCode TA_PREFIX(INT_MACD)( int    startIdx,
 
 
    /* Copy the result into the output for the caller. */
-   ARRAY_MEMMOVE( outMACD, 0, fastEMABuffer, lookbackSignal, (endIdx-startIdx)+1 );
+   // SEAN SEAN SEAN ARRAY_MEMMOVE( outMACD, 0, fastEMABuffer, lookbackSignal, (endIdx-startIdx)+1 );
+   ARRAY_MEMMOVE( outMACD, 0, fastEMABuffer, (lookbackSignal > 0 ? lookbackSignal : 0), (endIdx-startIdx) + 1 + lookbackSignal );
+   // SEAN SEAN SEAN fprintf(stderr, "-*-*-*-*-*-*-* Src %x, buf %x, idx %d, size %d\n", outMACD, fastEMABuffer, lookbackSignal, (endIdx-startIdx)+1);
 
    /* Calculate the signal/trigger line. */
    retCode = FUNCTION_CALL_DOUBLE(INT_EMA)( 0, VALUE_HANDLE_GET(outNbElement1)-1,

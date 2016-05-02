@@ -137,25 +137,25 @@ int main( int argc, char **argv )
    srand( (unsigned)time( NULL ) );
 
    /* Test utility like List/Stack/Dictionary/Memory Allocation etc... */
-   retValue = test_internals();
-   if( retValue != TA_TEST_PASS )
-   {
-      printf( "\nFailed an internal test with code=%d\n", retValue );
-      return retValue;
-   }
+   //retValue = test_internals();
+   //if( retValue != TA_TEST_PASS )
+   //{
+   //   printf( "\nFailed an internal test with code=%d\n", retValue );
+   //   return retValue;
+   //}
 
    /* Test abstract interface. */
-   retValue = test_abstract();
-   if( retValue != TA_TEST_PASS )
-   {
-      printf( "Failed: Abstract interface Tests (error number = %d)\n", retValue );
-      return retValue;
-   }
+   //retValue = test_abstract();
+   //if( retValue != TA_TEST_PASS )
+   //{
+   //   printf( "Failed: Abstract interface Tests (error number = %d)\n", retValue );
+   //   return retValue;
+   //}
 
    /* Perform all regresstions tests (except when ta_regtest is executed for profiling only). */
    if( !doExtensiveProfiling )
    {
-      retValue = test_with_simulator();
+      //retValue = test_with_simulator();
       if( retValue != TA_TEST_PASS )
          return retValue;
 

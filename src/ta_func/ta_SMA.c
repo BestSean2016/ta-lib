@@ -123,6 +123,31 @@
  * 
  */
 /* Generated */ 
+/* Generated */ #if defined( _MANAGED ) && defined( USE_SUBARRAY )
+/* Generated */ enum class Core::RetCode Core::Sma( int    startIdx,
+/* Generated */                                     int    endIdx,
+/* Generated */                                     SubArray^    inReal,
+/* Generated */                                     int           optInTimePeriod, /* From 2 to 100000 */
+/* Generated */                                     [Out]int%    outBegIdx,
+/* Generated */                                     [Out]int%    outNBElement,
+/* Generated */                                     cli::array<double>^  outReal )
+/* Generated */ #elif defined( _MANAGED )
+/* Generated */ enum class Core::RetCode Core::Sma( int    startIdx,
+/* Generated */                                     int    endIdx,
+/* Generated */                                     cli::array<double>^ inReal,
+/* Generated */                                     int           optInTimePeriod, /* From 2 to 100000 */
+/* Generated */                                     [Out]int%    outBegIdx,
+/* Generated */                                     [Out]int%    outNBElement,
+/* Generated */                                     cli::array<double>^  outReal )
+/* Generated */ #elif defined( _JAVA )
+/* Generated */ public RetCode sma( int    startIdx,
+/* Generated */                     int    endIdx,
+/* Generated */                     double       inReal[],
+/* Generated */                     int           optInTimePeriod, /* From 2 to 100000 */
+/* Generated */                     MInteger     outBegIdx,
+/* Generated */                     MInteger     outNBElement,
+/* Generated */                     double        outReal[] )
+/* Generated */ #else
 /* Generated */ TA_RetCode TA_SMA( int    startIdx,
 /* Generated */                    int    endIdx,
 /* Generated */                    const double inReal[],
@@ -130,7 +155,7 @@
 /* Generated */                    int          *outBegIdx,
 /* Generated */                    int          *outNBElement,
 /* Generated */                    double        outReal[] )
-
+/* Generated */ #endif
 /**** END GENCODE SECTION 3 - DO NOT DELETE THIS LINE ****/
 {
    /* Insert local variables here. */
@@ -168,14 +193,39 @@
                                  outBegIdx, outNBElement, outReal ); 
 }
 
-//TA_INT_SMA
-TA_RetCode TA_PREFIX(INT_SMA) ( int    startIdx,
-                                int    endIdx,
-                                const INPUT_TYPE *inReal,
-                                int      optInTimePeriod, /* From 1 to TA_INTEGER_MAX */                       
-                                int     *outBegIdx,
-                                int     *outNBElement,
-                                double  *outReal )
+#if defined( _MANAGED ) && defined( USE_SUBARRAY ) && !defined(USE_SINGLE_PRECISION_INPUT)
+ enum class Core::RetCode Core::TA_INT_SMA( int     startIdx,
+                                               int     endIdx,
+									           SubArray^ inReal, 
+								               int     optInTimePeriod,
+								               [Out]int% outBegIdx, 
+								               [Out]int% outNBElement,
+											   cli::array<double>^  outReal)
+#elif defined( _MANAGED )
+ enum class Core::RetCode Core::TA_INT_SMA( int     startIdx,
+                                               int     endIdx,
+									           cli::array<INPUT_TYPE>^ inReal, 
+								               int     optInTimePeriod,
+								               [Out]int% outBegIdx, 
+								               [Out]int% outNBElement,
+											   cli::array<double>^  outReal)
+#elif defined( _JAVA )
+RetCode TA_INT_SMA( int    startIdx,
+                    int    endIdx,
+                    INPUT_TYPE inReal[],
+                    int      optInTimePeriod, /* From 1 to TA_INTEGER_MAX */                       
+                    MInteger outBegIdx,
+                    MInteger outNBElement,
+                    double   outReal[] )
+#else
+TA_RetCode TA_PREFIX(INT_SMA)( int    startIdx,
+                               int    endIdx,
+                               const INPUT_TYPE *inReal,
+                               int      optInTimePeriod, /* From 1 to TA_INTEGER_MAX */                       
+                               int     *outBegIdx,
+                               int     *outNBElement,
+                               double  *outReal )
+#endif
 {
    double periodTotal, tempReal;
    int i, outIdx, trailingIdx, lookbackTotal;
@@ -235,14 +285,29 @@ TA_RetCode TA_PREFIX(INT_SMA) ( int    startIdx,
 /**** START GENCODE SECTION 5 - DO NOT DELETE THIS LINE ****/
 /* Generated */ 
 /* Generated */ #define  USE_SINGLE_PRECISION_INPUT
-
 /* Generated */ #if !defined( _MANAGED ) && !defined( _JAVA )
 /* Generated */    #undef   TA_PREFIX
 /* Generated */    #define  TA_PREFIX(x) TA_S_##x
 /* Generated */ #endif
 /* Generated */ #undef   INPUT_TYPE
 /* Generated */ #define  INPUT_TYPE float
-
+/* Generated */ #if defined( _MANAGED )
+/* Generated */ enum class Core::RetCode Core::Sma( int    startIdx,
+/* Generated */                                     int    endIdx,
+/* Generated */                                     cli::array<float>^ inReal,
+/* Generated */                                     int           optInTimePeriod, /* From 2 to 100000 */
+/* Generated */                                     [Out]int%    outBegIdx,
+/* Generated */                                     [Out]int%    outNBElement,
+/* Generated */                                     cli::array<double>^  outReal )
+/* Generated */ #elif defined( _JAVA )
+/* Generated */ public RetCode sma( int    startIdx,
+/* Generated */                     int    endIdx,
+/* Generated */                     float        inReal[],
+/* Generated */                     int           optInTimePeriod, /* From 2 to 100000 */
+/* Generated */                     MInteger     outBegIdx,
+/* Generated */                     MInteger     outNBElement,
+/* Generated */                     double        outReal[] )
+/* Generated */ #else
 /* Generated */ TA_RetCode TA_S_SMA( int    startIdx,
 /* Generated */                      int    endIdx,
 /* Generated */                      const float  inReal[],
@@ -250,6 +315,7 @@ TA_RetCode TA_PREFIX(INT_SMA) ( int    startIdx,
 /* Generated */                      int          *outBegIdx,
 /* Generated */                      int          *outNBElement,
 /* Generated */                      double        outReal[] )
+/* Generated */ #endif
 /* Generated */ {
 /* Generated */  #ifndef TA_FUNC_NO_RANGE_CHECK
 /* Generated */     if( startIdx < 0 )
@@ -272,8 +338,31 @@ TA_RetCode TA_PREFIX(INT_SMA) ( int    startIdx,
 /* Generated */                                  inReal, optInTimePeriod,
 /* Generated */                                  outBegIdx, outNBElement, outReal ); 
 /* Generated */ }
-
-//TA_S_INT_SMA
+/* Generated */ #if defined( _MANAGED ) && defined( USE_SUBARRAY ) && !defined(USE_SINGLE_PRECISION_INPUT)
+/* Generated */  enum class Core::RetCode Core::TA_INT_SMA( int     startIdx,
+/* Generated */                                                int     endIdx,
+/* Generated */ 									           SubArray^ inReal, 
+/* Generated */ 								               int     optInTimePeriod,
+/* Generated */ 								               [Out]int% outBegIdx, 
+/* Generated */ 								               [Out]int% outNBElement,
+/* Generated */ 											   cli::array<double>^  outReal)
+/* Generated */ #elif defined( _MANAGED )
+/* Generated */  enum class Core::RetCode Core::TA_INT_SMA( int     startIdx,
+/* Generated */                                                int     endIdx,
+/* Generated */ 									           cli::array<INPUT_TYPE>^ inReal, 
+/* Generated */ 								               int     optInTimePeriod,
+/* Generated */ 								               [Out]int% outBegIdx, 
+/* Generated */ 								               [Out]int% outNBElement,
+/* Generated */ 											   cli::array<double>^  outReal)
+/* Generated */ #elif defined( _JAVA )
+/* Generated */ RetCode TA_INT_SMA( int    startIdx,
+/* Generated */                     int    endIdx,
+/* Generated */                     INPUT_TYPE inReal[],
+/* Generated */                     int      optInTimePeriod,                        
+/* Generated */                     MInteger outBegIdx,
+/* Generated */                     MInteger outNBElement,
+/* Generated */                     double   outReal[] )
+/* Generated */ #else
 /* Generated */ TA_RetCode TA_PREFIX(INT_SMA)( int    startIdx,
 /* Generated */                                int    endIdx,
 /* Generated */                                const INPUT_TYPE *inReal,
@@ -281,6 +370,7 @@ TA_RetCode TA_PREFIX(INT_SMA) ( int    startIdx,
 /* Generated */                                int     *outBegIdx,
 /* Generated */                                int     *outNBElement,
 /* Generated */                                double  *outReal )
+/* Generated */ #endif
 /* Generated */ {
 /* Generated */    double periodTotal, tempReal;
 /* Generated */    int i, outIdx, trailingIdx, lookbackTotal;
@@ -314,5 +404,8 @@ TA_RetCode TA_PREFIX(INT_SMA) ( int    startIdx,
 /* Generated */    return ENUM_VALUE(RetCode,TA_SUCCESS,Success);
 /* Generated */ }
 /* Generated */ 
+/* Generated */ #if defined( _MANAGED )
+/* Generated */ }}} // Close namespace TicTacTec.TA.Lib
+/* Generated */ #endif
 /**** END GENCODE SECTION 5 - DO NOT DELETE THIS LINE ****/
 
