@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 # libtoolT - Provide generalized library-building support services.
 # Generated automatically by  (GNU ta-lib 0.4.0)
@@ -30,10 +30,10 @@
 # the same distribution terms that you use for the rest of that program.
 
 # A sed program that does not truncate output.
-SED="/usr/bin/sed"
+SED="/bin/sed"
 
 # Sed that helps us avoid accidentally triggering echo(1) options like -n.
-Xsed="/usr/bin/sed -e 1s/^X//"
+Xsed="/bin/sed -e 1s/^X//"
 
 # The HP-UX ksh and POSIX shell print the target directory to stdout
 # if CDPATH is set.
@@ -44,10 +44,10 @@ available_tags=" CXX F77"
 
 # ### BEGIN LIBTOOL CONFIG
 
-# Libtool was configured on host centos7:
+# Libtool was configured on host ubuntu-32:
 
 # Shell to use when invoking shell scripts.
-SHELL="/bin/sh"
+SHELL="/bin/bash"
 
 # Whether or not to build shared libraries.
 build_libtool_libs=yes
@@ -66,12 +66,12 @@ fast_install=yes
 
 # The host system.
 host_alias=
-host=x86_64-unknown-linux-gnu
+host=i686-pc-linux-gnu
 host_os=linux-gnu
 
 # The build system.
 build_alias=
-build=x86_64-unknown-linux-gnu
+build=i686-pc-linux-gnu
 build_os=linux-gnu
 
 # An echo program that does not interpret backslashes.
@@ -82,22 +82,22 @@ AR="ar"
 AR_FLAGS="cru"
 
 # A C compiler.
-LTCC="gcc"
+LTCC="clang"
 
 # LTCC compiler flags.
-LTCFLAGS="-g -O2"
+LTCFLAGS="-g -O2 -Wall"
 
 # A language-specific compiler.
-CC="gcc"
+CC="clang"
 
 # Is the compiler the GNU C compiler?
 with_gcc=yes
 
 # An ERE matcher.
-EGREP="/usr/bin/grep -E"
+EGREP="/bin/grep -E"
 
 # The linker used to build libraries.
-LD="/usr/bin/ld -m elf_x86_64"
+LD="/usr/bin/ld"
 
 # Whether we need hard or soft links.
 LN_S="ln -s"
@@ -171,10 +171,10 @@ dlopen_self=unknown
 dlopen_self_static=unknown
 
 # Compiler flag to prevent dynamic linking.
-link_static_flag=""
+link_static_flag="-static"
 
 # Compiler flag to turn off builtin functions.
-no_builtin_flag=" -fno-builtin"
+no_builtin_flag=" -fno-builtin -fno-rtti -fno-exceptions"
 
 # Compiler flag to allow reflexive dlopens.
 export_dynamic_flag_spec="\${wl}--export-dynamic"
@@ -325,10 +325,10 @@ variables_saved_for_relink="PATH LD_LIBRARY_PATH LD_RUN_PATH GCC_EXEC_PREFIX COM
 link_all_deplibs=no
 
 # Compile-time system search path for libraries
-sys_lib_search_path_spec=" /usr/lib/gcc/x86_64-redhat-linux/4.8.5/ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../x86_64-redhat-linux/lib/x86_64-redhat-linux/4.8.5/ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../x86_64-redhat-linux/lib/../lib64/ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../x86_64-redhat-linux/4.8.5/ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/ /lib/x86_64-redhat-linux/4.8.5/ /lib/../lib64/ /usr/lib/x86_64-redhat-linux/4.8.5/ /usr/lib/../lib64/ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../x86_64-redhat-linux/lib/ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../ /lib/ /usr/lib/"
+sys_lib_search_path_spec=" /usr/lib/llvm-3.6/bin/../lib/clang/3.6.0 /usr/bin/../lib/gcc/i686-linux-gnu/4.8 /usr/bin/../lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /usr/bin/../lib/gcc/i686-linux-gnu/4.8/../../.. /usr/lib/llvm-3.6/bin/../lib /lib /usr/lib"
 
 # Run-time system search path for libraries
-sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib64/atlas /usr/lib64/dyninst /usr/lib64/llvm /usr/lib64/mysql /usr/lib64/octave/3.8.2 /usr/lib64/qt-3.3/lib "
+sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib/i386-linux-gnu/libfakeroot /usr/lib/i386-linux-gnu/mesa-egl /usr/lib/i386-linux-gnu/mesa /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /lib/i686-linux-gnu /usr/lib/i686-linux-gnu /usr/local/lib /usr/lib/vmware-tools/lib32/libvmGuestLib.so /usr/lib/vmware-tools/lib64/libvmGuestLib.so /usr/lib/vmware-tools/lib32/libvmGuestLibJava.so /usr/lib/vmware-tools/lib64/libvmGuestLibJava.so /usr/lib/vmware-tools/lib32/libDeployPkg.so /usr/lib/vmware-tools/lib64/libDeployPkg.so "
 
 # Fix the shell variable $srcfile for the compiler.
 fix_srcfile_path=""
@@ -7223,10 +7223,10 @@ disable_libs=static
 # End:
 # ### BEGIN LIBTOOL TAG CONFIG: CXX
 
-# Libtool was configured on host centos7:
+# Libtool was configured on host ubuntu-32:
 
 # Shell to use when invoking shell scripts.
-SHELL="/bin/sh"
+SHELL="/bin/bash"
 
 # Whether or not to build shared libraries.
 build_libtool_libs=yes
@@ -7245,12 +7245,12 @@ fast_install=yes
 
 # The host system.
 host_alias=
-host=x86_64-unknown-linux-gnu
+host=i686-pc-linux-gnu
 host_os=linux-gnu
 
 # The build system.
 build_alias=
-build=x86_64-unknown-linux-gnu
+build=i686-pc-linux-gnu
 build_os=linux-gnu
 
 # An echo program that does not interpret backslashes.
@@ -7261,22 +7261,22 @@ AR="ar"
 AR_FLAGS="cru"
 
 # A C compiler.
-LTCC="gcc"
+LTCC="clang"
 
 # LTCC compiler flags.
-LTCFLAGS="-g -O2"
+LTCFLAGS="-g -O2 -Wall"
 
 # A language-specific compiler.
-CC="g++"
+CC="clang++"
 
 # Is the compiler the GNU C compiler?
 with_gcc=yes
 
 # An ERE matcher.
-EGREP="/usr/bin/grep -E"
+EGREP="/bin/grep -E"
 
 # The linker used to build libraries.
-LD="/usr/bin/ld -m elf_x86_64"
+LD="/usr/bin/ld"
 
 # Whether we need hard or soft links.
 LN_S="ln -s"
@@ -7350,7 +7350,7 @@ dlopen_self=unknown
 dlopen_self_static=unknown
 
 # Compiler flag to prevent dynamic linking.
-link_static_flag=""
+link_static_flag="-static"
 
 # Compiler flag to turn off builtin functions.
 no_builtin_flag=" -fno-builtin"
@@ -7405,11 +7405,11 @@ striplib="strip --strip-unneeded"
 
 # Dependencies to place before the objects being linked to create a
 # shared library.
-predep_objects="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbeginS.o"
+predep_objects="/usr/bin/../lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crti.o /usr/bin/../lib/gcc/i686-linux-gnu/4.8/crtbeginS.o"
 
 # Dependencies to place after the objects being linked to create a
 # shared library.
-postdep_objects="/usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtendS.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o"
+postdep_objects="/usr/bin/../lib/gcc/i686-linux-gnu/4.8/crtendS.o /usr/bin/../lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crtn.o"
 
 # Dependencies to place before the objects being linked to create a
 # shared library.
@@ -7421,7 +7421,7 @@ postdeps="-lstdc++ -lm -lgcc_s -lc -lgcc_s"
 
 # The library search path used internally by the compiler when linking
 # a shared library.
-compiler_lib_search_path="-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.."
+compiler_lib_search_path="-L/usr/bin/../lib/gcc/i686-linux-gnu/4.8 -L/usr/bin/../lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu -L/lib/i386-linux-gnu -L/usr/lib/i386-linux-gnu -L/usr/bin/../lib/gcc/i686-linux-gnu/4.8/../../.. -L/usr/lib/llvm-3.6/bin/../lib -L/lib -L/usr/lib"
 
 # Method to check whether dependent libraries are shared objects.
 deplibs_check_method="pass_all"
@@ -7501,10 +7501,10 @@ variables_saved_for_relink="PATH LD_LIBRARY_PATH LD_RUN_PATH GCC_EXEC_PREFIX COM
 link_all_deplibs=no
 
 # Compile-time system search path for libraries
-sys_lib_search_path_spec=" /usr/lib/gcc/x86_64-redhat-linux/4.8.5/ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../x86_64-redhat-linux/lib/x86_64-redhat-linux/4.8.5/ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../x86_64-redhat-linux/lib/../lib64/ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../x86_64-redhat-linux/4.8.5/ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/ /lib/x86_64-redhat-linux/4.8.5/ /lib/../lib64/ /usr/lib/x86_64-redhat-linux/4.8.5/ /usr/lib/../lib64/ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../x86_64-redhat-linux/lib/ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../ /lib/ /usr/lib/"
+sys_lib_search_path_spec=" /usr/lib/llvm-3.6/bin/../lib/clang/3.6.0 /usr/bin/../lib/gcc/i686-linux-gnu/4.8 /usr/bin/../lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /usr/bin/../lib/gcc/i686-linux-gnu/4.8/../../.. /usr/lib/llvm-3.6/bin/../lib /lib /usr/lib"
 
 # Run-time system search path for libraries
-sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib64/atlas /usr/lib64/dyninst /usr/lib64/llvm /usr/lib64/mysql /usr/lib64/octave/3.8.2 /usr/lib64/qt-3.3/lib "
+sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib/i386-linux-gnu/libfakeroot /usr/lib/i386-linux-gnu/mesa-egl /usr/lib/i386-linux-gnu/mesa /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /lib/i686-linux-gnu /usr/lib/i686-linux-gnu /usr/local/lib /usr/lib/vmware-tools/lib32/libvmGuestLib.so /usr/lib/vmware-tools/lib64/libvmGuestLib.so /usr/lib/vmware-tools/lib32/libvmGuestLibJava.so /usr/lib/vmware-tools/lib64/libvmGuestLibJava.so /usr/lib/vmware-tools/lib32/libDeployPkg.so /usr/lib/vmware-tools/lib64/libDeployPkg.so "
 
 # Fix the shell variable $srcfile for the compiler.
 fix_srcfile_path=""
@@ -7528,10 +7528,10 @@ include_expsyms=""
 
 # ### BEGIN LIBTOOL TAG CONFIG: F77
 
-# Libtool was configured on host centos7:
+# Libtool was configured on host ubuntu-32:
 
 # Shell to use when invoking shell scripts.
-SHELL="/bin/sh"
+SHELL="/bin/bash"
 
 # Whether or not to build shared libraries.
 build_libtool_libs=yes
@@ -7550,12 +7550,12 @@ fast_install=yes
 
 # The host system.
 host_alias=
-host=x86_64-unknown-linux-gnu
+host=i686-pc-linux-gnu
 host_os=linux-gnu
 
 # The build system.
 build_alias=
-build=x86_64-unknown-linux-gnu
+build=i686-pc-linux-gnu
 build_os=linux-gnu
 
 # An echo program that does not interpret backslashes.
@@ -7566,10 +7566,10 @@ AR="ar"
 AR_FLAGS="cru"
 
 # A C compiler.
-LTCC="gcc"
+LTCC="clang"
 
 # LTCC compiler flags.
-LTCFLAGS="-g -O2"
+LTCFLAGS="-g -O2 -Wall"
 
 # A language-specific compiler.
 CC="gfortran"
@@ -7578,10 +7578,10 @@ CC="gfortran"
 with_gcc=yes
 
 # An ERE matcher.
-EGREP="/usr/bin/grep -E"
+EGREP="/bin/grep -E"
 
 # The linker used to build libraries.
-LD="/usr/bin/ld -m elf_x86_64"
+LD="/usr/bin/ld"
 
 # Whether we need hard or soft links.
 LN_S="ln -s"
@@ -7655,7 +7655,7 @@ dlopen_self=unknown
 dlopen_self_static=unknown
 
 # Compiler flag to prevent dynamic linking.
-link_static_flag=""
+link_static_flag="-static"
 
 # Compiler flag to turn off builtin functions.
 no_builtin_flag=""
@@ -7809,10 +7809,10 @@ variables_saved_for_relink="PATH LD_LIBRARY_PATH LD_RUN_PATH GCC_EXEC_PREFIX COM
 link_all_deplibs=no
 
 # Compile-time system search path for libraries
-sys_lib_search_path_spec=" /usr/lib/gcc/x86_64-redhat-linux/4.8.5/ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../x86_64-redhat-linux/lib/x86_64-redhat-linux/4.8.5/ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../x86_64-redhat-linux/lib/../lib64/ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../x86_64-redhat-linux/4.8.5/ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/ /lib/x86_64-redhat-linux/4.8.5/ /lib/../lib64/ /usr/lib/x86_64-redhat-linux/4.8.5/ /usr/lib/../lib64/ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../x86_64-redhat-linux/lib/ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../ /lib/ /usr/lib/"
+sys_lib_search_path_spec=" /usr/lib/gcc/i686-linux-gnu/4.8/ /usr/lib/gcc/i686-linux-gnu/4.8/../../../../i686-linux-gnu/lib/i686-linux-gnu/4.8/ /usr/lib/gcc/i686-linux-gnu/4.8/../../../../i686-linux-gnu/lib/i386-linux-gnu/ /usr/lib/gcc/i686-linux-gnu/4.8/../../../../i686-linux-gnu/lib/../lib/ /usr/lib/gcc/i686-linux-gnu/4.8/../../../i686-linux-gnu/4.8/ /usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/ /usr/lib/gcc/i686-linux-gnu/4.8/../../../../lib/ /lib/i686-linux-gnu/4.8/ /lib/i386-linux-gnu/ /lib/../lib/ /usr/lib/i686-linux-gnu/4.8/ /usr/lib/i386-linux-gnu/ /usr/lib/../lib/ /usr/lib/gcc/i686-linux-gnu/4.8/../../../../i686-linux-gnu/lib/ /usr/lib/gcc/i686-linux-gnu/4.8/../../../ /lib/ /usr/lib/"
 
 # Run-time system search path for libraries
-sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib64/atlas /usr/lib64/dyninst /usr/lib64/llvm /usr/lib64/mysql /usr/lib64/octave/3.8.2 /usr/lib64/qt-3.3/lib "
+sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib/i386-linux-gnu/libfakeroot /usr/lib/i386-linux-gnu/mesa-egl /usr/lib/i386-linux-gnu/mesa /lib/i386-linux-gnu /usr/lib/i386-linux-gnu /lib/i686-linux-gnu /usr/lib/i686-linux-gnu /usr/local/lib /usr/lib/vmware-tools/lib32/libvmGuestLib.so /usr/lib/vmware-tools/lib64/libvmGuestLib.so /usr/lib/vmware-tools/lib32/libvmGuestLibJava.so /usr/lib/vmware-tools/lib64/libvmGuestLibJava.so /usr/lib/vmware-tools/lib32/libDeployPkg.so /usr/lib/vmware-tools/lib64/libDeployPkg.so "
 
 # Fix the shell variable $srcfile for the compiler.
 fix_srcfile_path=""

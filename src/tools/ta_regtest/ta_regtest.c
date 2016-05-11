@@ -99,7 +99,7 @@ int main( int argc, char **argv )
 #endif
    double freq;
 
-   ErrorNumber retValue;
+   ErrorNumber retValue = TA_TEST_PASS;
 
    (void)argv;
 

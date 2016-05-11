@@ -495,8 +495,12 @@ TA_RetCode TA_PREFIX(INT_MACD)( int    startIdx,
 
    /* Copy the result into the output for the caller. */
    // SEAN SEAN SEAN ARRAY_MEMMOVE( outMACD, 0, fastEMABuffer, lookbackSignal, (endIdx-startIdx)+1 );
-   ARRAY_MEMMOVE( outMACD, 0, fastEMABuffer, (lookbackSignal > 0 ? lookbackSignal : 0), (endIdx-startIdx) + 1 + lookbackSignal );
-   // SEAN SEAN SEAN fprintf(stderr, "-*-*-*-*-*-*-* Src %x, buf %x, idx %d, size %d\n", outMACD, fastEMABuffer, lookbackSignal, (endIdx-startIdx)+1);
+   // fprintf(stderr, "-*-*-*-*-*-*-* Src %x, buf %x, idx %d, size %d\n", outMACD, fastEMABuffer, lookbackSignal, (endIdx-startIdx) + 1);
+   if (lookbackSignal >= 0)
+       ARRAY_MEMMOVE( outMACD, 0, fastEMABuffer, lookbackSignal, (endIdx-startIdx) + 1);
+   else
+       ARRAY_MEMMOVE( outMACD, 0, fastEMABuffer, 0, (endIdx-startIdx) + 1 + lookbackSignal);
+   // SEAN SEAN SEAN
 
    /* Calculate the signal/trigger line. */
    retCode = FUNCTION_CALL_DOUBLE(INT_EMA)( 0, VALUE_HANDLE_GET(outNbElement1)-1,
