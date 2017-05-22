@@ -682,7 +682,7 @@ configure:20557: $? = 0
 configure:20575: result: yes
 configure:20582: checking for _doprnt
 configure:20638: /usr/local/gcc63/bin/gcc -o conftest -Wall -O3   conftest.c -lpthread -ldl  >&5
-/tmp/ccLlRcnC.o: In function `main':
+/tmp/cciL8j9K.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `_doprnt'
 collect2: error: ld returned 1 exit status
 configure:20644: $? = 1
@@ -770,7 +770,7 @@ configure:20751: /usr/local/gcc63/bin/gcc -o conftest -Wall -O3   conftest.c -lp
 conftest.c:63:6: warning: conflicting types for built-in function 'floor'
  char floor ();
       ^~~~~
-/tmp/ccd7roQG.o: In function `main':
+/tmp/ccmsUvvT.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `floor'
 collect2: error: ld returned 1 exit status
 configure:20757: $? = 1
@@ -894,7 +894,7 @@ configure:20751: /usr/local/gcc63/bin/gcc -o conftest -Wall -O3   conftest.c -lp
 conftest.c:69:6: warning: conflicting types for built-in function 'pow'
  char pow ();
       ^~~
-/tmp/ccWNAgXn.o: In function `main':
+/tmp/ccKklLVE.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `pow'
 collect2: error: ld returned 1 exit status
 configure:20757: $? = 1
@@ -988,7 +988,7 @@ configure:20751: /usr/local/gcc63/bin/gcc -o conftest -Wall -O3   conftest.c -lp
 conftest.c:69:6: warning: conflicting types for built-in function 'sqrt'
  char sqrt ();
       ^~~~
-/tmp/ccGErZus.o: In function `main':
+/tmp/ccmZIkBL.o: In function `main':
 conftest.c:(.text.startup+0x7): undefined reference to `sqrt'
 collect2: error: ld returned 1 exit status
 configure:20757: $? = 1

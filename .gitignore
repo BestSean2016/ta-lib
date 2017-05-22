@@ -10,9 +10,6 @@
 *.moc
 *.o
 *.lo
-*.Po
-*.Plo
-*.Tpo
 *.obj
 *.orig
 *.rej
@@ -21,6 +18,11 @@
 *_pch.h.cpp
 *_resource.rc
 *.qm
+*.Po
+*.Plo
+*.To
+*.Tpo
+*.Tlo
 .#*
 *.*#
 core
@@ -83,11 +85,7 @@ build
 build/
 __pycache__
 __pycache__/
-autom4te.cache
-autom4te.cache/
 .deps
 .deps/
 .libs
 .libs/
-.kdev4
-.kdev4/

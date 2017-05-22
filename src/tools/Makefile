@@ -64,13 +64,15 @@ AUTOMAKE = ${SHELL} /home/sean/projects/ta-lib/missing --run automake-1.10
 AWK = gawk
 CC = /usr/local/gcc63/bin/gcc
 CCDEPMODE = depmode=gcc3
-CFLAGS = -Wall -O3
+#CFLAGS = -Wall -O3
+CFLAGS = -Wall -g
 CPP = /usr/local/gcc63/bin/gcc -E
 CPPFLAGS = 
 CXX = /usr/local/gcc63/bin/g++
 CXXCPP = /usr/local/gcc63/bin/g++ -E
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS = -Wall -O3
+# CXXFLAGS = -Wall -O3
+CXXFLAGS = -Wall -g
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
