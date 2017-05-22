@@ -9,6 +9,7 @@
 *.core
 *.moc
 *.o
+*.lo
 *.Po
 *.Plo
 *.Tpo
