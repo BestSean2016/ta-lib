@@ -4,14 +4,14 @@
 *~
 *.autosave
 *.a
+*.la
+*.lai
 *.core
 *.moc
 *.o
-*.lo
-*.la
-*.a
-*.Plo
 *.Po
+*.Plo
+*.Tpo
 *.obj
 *.orig
 *.rej
@@ -28,7 +28,7 @@ tags
 .DS_Store
 .directory
 *.debug
-#Makefile*
+Makefile*
 *.prl
 *.app
 moc_*.cpp
@@ -76,8 +76,17 @@ Thumbs.db
 *.dll
 *.exe
 
-*.pro.user
 
-/build
-/autom4*
-*.log
+# Build Diractory
+build
+build/
+__pycache__
+__pycache__/
+autom4te.cache
+autom4te.cache/
+.deps
+.deps/
+.libs
+.libs/
+.kdev4
+.kdev4/
